@@ -6,7 +6,7 @@ Emotion-based Pain Detection AI project
 ## 📌 프로젝트 개요
 - 환자의 얼굴 표정, 음성, 텍스트 데이터를 분석하여 **통증 강도 예측**
 - **TensorFlow & PyTorch 기반 딥러닝 모델**을 활용하여 AI 구축
-- **의료 도메인 적용**: 응급실, 중환자실, 요양병원 등에서 활용 가능
+- **의료 도메인 적용**: 응급실, 중환자실, 요양병원 등에서 의사소통이 어려운 환자의 통증 감지
 
 ## 📊 데이터셋
 - **UNBC-McMaster Shoulder Pain Dataset** (얼굴 표정 기반 통증 감지)
