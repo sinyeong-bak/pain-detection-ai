@@ -13,6 +13,15 @@ Emotion-based Pain Detection AI project
 - **BioVid Heat Pain Database** (생체 신호 & 음성 기반 통증 감지)
 - **Pain Audio Dataset** (음성 기반 감정 분석)
 
+## 🔥 프로젝트 업데이트: 데이터셋 변경 및 해결책
+
+초기 계획에서는 UNBC-McMaster 데이터셋을 사용하려 했으나, 접근 제한으로 인해 대체 데이터셋을 활용하기로 하였습니다.
+- 얼굴 표정 분석 → **FER-2013** (Kaggle) 사용
+- 음성 분석 → **Emotion Dataset** (Kaggle) 사용
+- 텍스트 분석 → **AI 감성 챗봇 코퍼스** (AI-Hub) 사용
+
+자세한 내용은 [문서 보기](docs/data_issue_and_solution.md).
+
 ## 🔧 기술 스택
 - **Deep Learning Frameworks:** TensorFlow, PyTorch
 - **Facial Expression Analysis:** CNN
