@@ -2,25 +2,41 @@
 Emotion-based Pain Detection AI project
 
 # 🎯 PainSense AI - 감정 기반 통증 감지 AI
+# 🎯 감정 기반 통증 감지 AI (PainSense AI)
 
 ## 📌 프로젝트 개요
-- 환자의 얼굴 표정, 음성, 텍스트 데이터를 분석하여 **통증 강도 예측**
-- **TensorFlow & PyTorch 기반 딥러닝 모델**을 활용하여 AI 구축
-- **의료 도메인 적용**: 응급실, 중환자실, 요양병원 등에서 의사소통이 어려운 환자의 통증 감지
+**PainSense AI**는 얼굴 표정 및 음성 데이터를 분석하여 환자의 통증을 감지하는 AI 시스템입니다.  
+기존 텍스트 기반 감정 분석 모델을 제외하고, **이미지(CNN) 및 음성(LSTM) 기반 감정 분석 모델**을 구축하는 방향으로 프로젝트를 수정하였습니다.
 
-## 📊 데이터셋
-- **UNBC-McMaster Shoulder Pain Dataset** (얼굴 표정 기반 통증 감지)
-- **BioVid Heat Pain Database** (생체 신호 & 음성 기반 통증 감지)
-- **Pain Audio Dataset** (음성 기반 감정 분석)
+## 📊 사용 데이터셋
+- **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)**
+  - 감정이 포함된 얼굴 이미지 데이터셋 (Angry, Fear, Neutral, Sad)
+- **[CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)**
+  - 다양한 감정이 표현된 음성 데이터셋 (Angry, Fear, Neutral, Sad)
 
-## 🔥 프로젝트 업데이트: 데이터셋 변경 및 해결책
+## ⚙️ 사용 기술
+- **이미지 감정 분석:** CNN (Convolutional Neural Network)
+- **음성 감정 분석:** LSTM + MFCC (Mel-Frequency Cepstral Coefficients)
+- **멀티모달 통합:** CNN + LSTM 모델 결합
+- **데이터 전처리:** OpenCV, Librosa, NumPy, Pandas
+- **모델 학습:** TensorFlow, PyTorch
 
-초기 계획에서는 UNBC-McMaster 데이터셋을 사용하려 했으나, 접근 제한으로 인해 대체 데이터셋을 활용하기로 하였습니다.
-- 얼굴 표정 분석 → **FER-2013** (Kaggle) 사용
-- 음성 분석 → **Emotion Dataset** (Kaggle) 사용
-- 텍스트 분석 → **AI 감성 챗봇 코퍼스** (AI-Hub) 사용
+## 🛠 프로젝트 진행 과정
+### ✅ 데이터 전처리 완료
+- FER-2013 데이터셋에서 **4개 감정만 필터링 (Angry, Fear, Neutral, Sad)**
+- CREMA-D 데이터셋에서 **텍스트 제외, 음성 데이터 전처리 (MFCC 변환)**
+- CREMA-D 데이터셋의 **음성 데이터 증강 완료 (피치 변환, 속도 변화, 노이즈 추가)**
+- FER-2013 및 CREMA-D의 **Train/Test 데이터 균형 조정 완료**
 
-자세한 내용은 [문서 보기](docs/data_issue_and_solution.md).
+### ✅ 다음 목표: CNN + LSTM 모델 설계
+- CNN을 활용하여 **얼굴 표정에서 감정 특징 추출**
+- LSTM을 활용하여 **음성 데이터의 감정 특징 분석**
+- **멀티모달 모델로 이미지와 음성을 함께 학습하는 방식 구현**
+
+## 🚀 실행 방법
+1. **데이터 다운로드 및 전처리**
+   ```bash
+   python preprocess.py
 
 ## 🔧 기술 스택
 - **Deep Learning Frameworks:** TensorFlow, PyTorch
@@ -30,7 +46,7 @@ Emotion-based Pain Detection AI project
 
 ## 🚀 프로젝트 진행 일정
 - 📅 **Week 1:** 데이터셋 분석 및 전처리
-- 📅 **Week 2:** 감정 분석 모델 구축 (표정, 음성, 텍스트)
+- 📅 **Week 2:** 감정 분석 모델 구축 (표정, 음성)
 - 📅 **Week 3:** 통합 통증 감지 모델 개발
 - 📅 **Week 4:** 모델 성능 평가 및 결과 정리
 
