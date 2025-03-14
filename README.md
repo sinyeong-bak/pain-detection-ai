@@ -1,7 +1,6 @@
 # pain-detection-ai
 Emotion-based Pain Detection AI project
 
-# 🎯 PainSense AI - 감정 기반 통증 감지 AI
 # 🎯 감정 기반 통증 감지 AI (PainSense AI)
 
 ## 📌 프로젝트 개요
