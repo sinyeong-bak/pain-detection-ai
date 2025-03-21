@@ -1,11 +1,17 @@
-# pain-detection-ai
-Emotion-based Pain Detection AI project
+# 🏥 Pain Detection AI
+**Emotion-based Pain Detection AI using CNN & LSTM**
 
 # 🎯 감정 기반 통증 감지 AI (PainSense AI)
 
 ## 📌 프로젝트 개요
-**PainSense AI**는 얼굴 표정 및 음성 데이터를 분석하여 환자의 통증을 감지하는 AI 시스템입니다.  
-기존 텍스트 기반 감정 분석 모델을 제외하고, **이미지(CNN) 및 음성(LSTM) 기반 감정 분석 모델**을 구축하는 방향으로 프로젝트를 수정하였습니다.
+이 프로젝트는 **환자의 얼굴 표정과 음성 데이터를 분석하여 통증을 자동 감지하는 AI 모델**을 개발하는 프로젝트입니다.  
+CNN과 LSTM을 결합하여 멀티모달 데이터를 처리하며, 모델 최적화를 통해 성능을 개선하는 과정을 거쳤습니다.  
+
+---
+
+## 📂 프로젝트 구조
+📂 pain-detection-ai/ │── 📁 models/ # 다양한 모델 구조 저장 │ ├── baseline_model.py # 초기 베이스라인 모델 │ ├── cnn_lstm_model.py # CNN + LSTM 통합 모델 │ ├── optimized_model.py # 최적화된 최신 모델 │── 📁 data/ # 데이터 관련 파일 (Git에 직접 업로드 X) │ ├── README.md # 데이터셋 설명 및 출처 │── 📁 results/ # 학습 결과 및 로그 저장 │ ├── 📁 training_logs/ # 훈련 로그 │ ├── 📁 model_evaluations/ # 평가 결과 │── 📁 notebooks/ # 실험 진행 과정 (Jupyter Notebook 파일) │ ├── model_experiments.ipynb
+│── 📁 scripts/ # 학습 및 평가 관련 스크립트 │ ├── train.py # 모델 학습 코드 │ ├── evaluate.py # 모델 평가 코드 │── README.md # 프로젝트 개요 설명 │── requirements.txt # 필요한 패키지 정리 │── .gitignore # 업로드 제외할 파일 설정
 
 ## 📊 사용 데이터셋
 - **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)**
@@ -63,7 +69,7 @@ Emotion-based Pain Detection AI project
 ├── 📄 README.md # 프로젝트 설명 
 ├── 📄 requirements.txt # 필요 라이브러리 정리
 
-## 📌 프로젝트 진행 과정 (업데이트)
+## 📌 프로젝트 진행 과정 (업데이트) 
 
 ### ✅ 1. 데이터 정리
 - `FER-2013` 데이터셋을 활용하여 얼굴 표정 분석 기반 감정 인식 프로젝트 진행
@@ -82,3 +88,38 @@ Emotion-based Pain Detection AI project
 ✔ **테스트 데이터:** `(2189, 48, 48, 1)`
 
 📌 다음 단계: **CNN 모델 설계 & 구현**
+---
+## 📌 프로젝트 진행 과정 (업데이트) 
+
+## 🚀 모델 구조 실험 과정
+### 🔹 1️⃣ **Baseline Model (기본 모델)**
+- `models/baseline_model.py`
+- 초기 CNN 모델을 사용하여 얼굴 표정 데이터만 분석
+- `Accuracy: 0.65, F1-score: 0.58`
+
+### 🔹 2️⃣ **CNN + LSTM 통합 모델**
+- `models/cnn_lstm_model.py`
+- 얼굴 표정 + 음성 데이터를 함께 분석하는 멀티모달 모델
+- `Accuracy: 0.74, F1-score: 0.68`
+
+### 🔹 3️⃣ **최적화된 모델**
+- `models/optimized_model.py`
+- Softmax/Sigmoid 전환, L2 정규화, Dropout 최적화
+- `Accuracy: 0.85, F1-score: 0.79`
+
+---
+
+## 📊 실험 결과 및 분석
+| Model Version       | Accuracy | F1-score | 주요 변경 사항 |
+|--------------------|----------|----------|--------------|
+| Baseline Model    | 0.65     | 0.58     | CNN만 사용 |
+| CNN + LSTM        | 0.74     | 0.68     | 얼굴 표정 + 음성 데이터 통합 |
+| Optimized Model   | 0.85     | 0.79     | Regularization, Hyperparameter Tuning |
+
+---
+
+## 📦 환경 설정
+```bash
+# 패키지 설치
+pip install -r requirements.txt
+
