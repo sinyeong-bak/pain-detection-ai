@@ -12,7 +12,7 @@ def preprocess_audio(file_path, max_length=100):
     audio, sr = librosa.load(file_path, sr=16000)  # 샘플링 속도 16kHz
     mfcc = librosa.feature.mfcc(y=audio, sr=sr, n_mfcc=40)
 
-    # ��� 고정된 길이로 패딩
+    #고정된 길이로 패딩
     if mfcc.shape[1] < max_length:
         pad_width = max_length - mfcc.shape[1]
         mfcc = np.pad(mfcc, pad_width=((0, 0), (0, pad_width)), mode='constant')
