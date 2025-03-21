@@ -103,6 +103,20 @@ pain-detection-ai/
 
 ---
 
+
+### **이번 프로젝트를 통해 배운 점**
+
+- 데이터 품질과 양이 모델 성능에 미치는 영향이 크다는 점을 깨달음
+- 멀티모달 모델을 개발할 때, 서로 다른 데이터(이미지 & 오디오)를 병합할 때의 통일성이 중요함
+- Overfitting을 해결하기 위한 다양한 기법(Regularization, Dropout, Data Augmentation 등)의 필요성을 체감함
+
+---
+
+## ✅ **다음 목표 (향후 계획)**
+
+- Overfitting 해결을 위한 최적화 진행 (Regularization, Learning Rate Tuning 등 적용 예정)
+- 실제 의료 환경에서 적용 가능성을 고려한 평가 방법 검토
+
 ## 📦 환경 설정
 ```bash
 # 패키지 설치
