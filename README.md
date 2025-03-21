@@ -74,14 +74,14 @@ pain-detection-ai/
 
 ### ✅ 1. 데이터 정리
 - `FER-2013` 데이터셋을 활용하여 얼굴 표정 분석 기반 감정 인식 프로젝트 진행
-- **불필요한 감정 클래스 제거**: `disgust`, `happy`
+- **불필요한 감정 클래스 제거**: `disgust`, `happy, surprise`
 - **데이터 증강(Augmentation) 수행**: `surprise` 클래스 (3171개 → 4000개 이상)
 
 ### ✅ 2. 데이터 전처리
 - **이미지 크기 조정**: 모든 이미지를 `48x48`로 변환
 - **정규화(Normalization)**: 픽셀 값을 `[0,1]` 범위로 변환 (`/255.0`)
-- **레이블 원-핫 인코딩**: `angry, fear, neutral, sad, surprise` (총 5개 클래스)
-- **훈련(train), 검증(validation), 테스트(test) 데이터 분리** (8:1:1 비율)
+- **레이블 원-핫 인코딩**: `angry, fear, neutral, sad` (총 4개 클래스)
+- **훈련(train), 테스트(test) 데이터 분리** (8:2 비율)
 
 ### ✅ 3. 현재 상태
 ✔ **훈련 데이터:** `(17509, 48, 48, 1)`  
@@ -92,30 +92,14 @@ pain-detection-ai/
 ---
 ## 프로젝트 진행 과정 (업데이트) 
 
-## 모델 구조 실험 과정
-### 🔹 1️⃣ **Baseline Model (기본 모델)**
-- `models/baseline_model.py`
-- 초기 CNN 모델을 사용하여 얼굴 표정 데이터만 분석
-- `Accuracy: 0.65, F1-score: 0.58`
+## 📊 모델 성능 결과 (Train & Test Performance)
 
-### 🔹 2️⃣ **CNN + LSTM 통합 모델**
-- `models/cnn_lstm_model.py`
-- 얼굴 표정 + 음성 데이터를 함께 분석하는 멀티모달 모델
-- `Accuracy: 0.74, F1-score: 0.68`
+| Model Version       | Train Accuracy | Test Accuracy | F1-score | 주요 변경 사항 |
+|--------------------|---------------|--------------|----------|--------------|
+| **CNN + LSTM 통합 모델** | 98.55% | 28.88% | 0.1304 | 얼굴 표정 + 음성 데이터 통합 |
 
-### 🔹 3️⃣ **최적화된 모델**
-- `models/optimized_model.py`
-- Softmax/Sigmoid 전환, L2 정규화, Dropout 최적화
-- `Accuracy: 0.85, F1-score: 0.79`
-
----
-
-## 📊 실험 결과 및 분석
-| Model Version       | Accuracy | F1-score | 주요 변경 사항 |
-|--------------------|----------|----------|--------------|
-| Baseline Model    | 0.65     | 0.58     | CNN만 사용 |
-| CNN + LSTM        | 0.74     | 0.68     | 얼굴 표정 + 음성 데이터 통합 |
-| Optimized Model   | 0.85     | 0.79     | Regularization, Hyperparameter Tuning |
+✅ **Train Accuracy가 높지만 Test Accuracy가 낮아 Overfitting이 발생함.**  
+✅ **현재 Regularization, Data Augmentation 등의 최적화 작업을 진행 중.**
 
 ---
 
