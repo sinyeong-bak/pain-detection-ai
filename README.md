@@ -16,8 +16,6 @@ pain-detection-ai/
 │── data/                   # 데이터셋 (Git 업로드 X)
 │   ├── README.md           # 데이터 다운로드 경로 설명
 │── scripts/                # 학습 및 평가 관련 코드
-│   ├── train.py            # 모델 학습 코드
-│   ├── evaluate.py         # 모델 평가 코드
 │   ├── preprocessing/      # ✅ 데이터 전처리 관련 코드
 │       ├── image_preprocessing.py  # 이미지 데이터 전처리
 │       ├── audio_preprocessing.py  # 오디오 데이터 전처리
