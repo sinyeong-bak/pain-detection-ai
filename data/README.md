@@ -25,7 +25,7 @@ FER-2013은 다양한 감정을 담고 있는 **48x48 픽셀 흑백 얼굴 이�
 ```bash
 mkdir -p data/fer2013
 mv fer2013.csv data/fer2013/
-
+```
 
 ### 2️⃣ **CREMA-D - 감정이 표현된 음성 데이터셋**
 🔗 [데이터셋 다운로드](https://github.com/CheyneyComputerScience/CREMA-D)
