@@ -1,7 +1,7 @@
 # 🏥 Pain Detection AI
 **Emotion-based Pain Detection AI using CNN & LSTM**
 
-# 감정 기반 통증 감지 AI (PainSense AI)
+# 감정 기반 통증 감지 AI
 
 ## 프로젝트 개요
 이 프로젝트는 **환자의 얼굴 표정과 음성 데이터를 분석하여 통증을 자동 감지하는 AI 모델**을 개발하는 프로젝트입니다.  
