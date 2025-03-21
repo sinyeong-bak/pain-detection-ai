@@ -12,8 +12,6 @@ pain-detection-ai/
 │── models/                 # 다양한 모델 구조 저장
 │── data/                   # 데이터셋 (Git 업로드 X)
 │   ├── README.md           # 데이터 다운로드 경로 설명
-│── results/                # 학습 결과 및 로그 저장
-│── notebooks/              # 실험 진행 과정 (Jupyter Notebook 파일)
 │── scripts/                # 학습 및 평가 관련 코드
 │   ├── train.py            # 모델 학습 코드
 │   ├── evaluate.py         # 모델 평가 코드
@@ -22,8 +20,6 @@ pain-detection-ai/
 │       ├── audio_preprocessing.py  # 오디오 데이터 전처리
 │── README.md               # 프로젝트 개요 설명
 │── requirements.txt        # 필요한 패키지 정리
-│── .gitignore              # 업로드 제외할 파일 설정
-
 ````
 
 
