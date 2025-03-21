@@ -10,8 +10,24 @@ CNN과 LSTM을 결합하여 멀티모달 데이터를 처리하며, 모델 최�
 ---
 
 ## 📂 프로젝트 구조
-📂 pain-detection-ai/ │── 📁 models/ # 다양한 모델 구조 저장 │ ├── baseline_model.py # 초기 베이스라인 모델 │ ├── cnn_lstm_model.py # CNN + LSTM 통합 모델 │ ├── optimized_model.py # 최적화된 최신 모델 │── 📁 data/ # 데이터 관련 파일 (Git에 직접 업로드 X) │ ├── README.md # 데이터셋 설명 및 출처 │── 📁 results/ # 학습 결과 및 로그 저장 │ ├── 📁 training_logs/ # 훈련 로그 │ ├── 📁 model_evaluations/ # 평가 결과 │── 📁 notebooks/ # 실험 진행 과정 (Jupyter Notebook 파일) │ ├── model_experiments.ipynb
-│── 📁 scripts/ # 학습 및 평가 관련 스크립트 │ ├── train.py # 모델 학습 코드 │ ├── evaluate.py # 모델 평가 코드 │── README.md # 프로젝트 개요 설명 │── requirements.txt # 필요한 패키지 정리 │── .gitignore # 업로드 제외할 파일 설정
+📂 pain-detection-ai/ 
+│── 📁 models/ # 다양한 모델 구조 저장 
+│ ├── baseline_model.py # 초기 베이스라인 모델 
+│ ├── cnn_lstm_model.py # CNN + LSTM 통합 모델 
+│ ├── optimized_model.py # 최적화된 최신 모델 
+│── 📁 data/ # 데이터 관련 파일 (Git에 직접 업로드 X) 
+│ ├── README.md # 데이터셋 설명 및 출처 
+│── 📁 results/ # 학습 결과 및 로그 저장 
+│ ├── 📁 training_logs/ # 훈련 로그 
+│ ├── 📁 model_evaluations/ # 평가 결과 
+│── 📁 notebooks/ # 실험 진행 과정 (Jupyter Notebook 파일) 
+│ ├── model_experiments.ipynb
+│── 📁 scripts/ # 학습 및 평가 관련 스크립트 
+│ ├── train.py # 모델 학습 코드 
+│ ├── evaluate.py # 모델 평가 코드 
+│── README.md # 프로젝트 개요 설명 
+│── requirements.txt # 필요한 패키지 정리 
+│── .gitignore # 업로드 제외할 파일 설정
 
 ## 📊 사용 데이터셋
 - **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)**
