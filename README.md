@@ -10,6 +10,9 @@ CNN과 LSTM을 결합하여 멀티모달 데이터를 처리하며, 모델 최�
  ```bash
 pain-detection-ai/
 │── models/                 # 다양한 모델 구조 저장
+│    ├── baseline_model.py 
+│    ├── cnn_lstm_model.py 
+│    ├── optimized_model.py
 │── data/                   # 데이터셋 (Git 업로드 X)
 │   ├── README.md           # 데이터 다운로드 경로 설명
 │── scripts/                # 학습 및 평가 관련 코드
