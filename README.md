@@ -49,11 +49,6 @@ pain-detection-ai/
 - LSTM을 활용하여 **음성 데이터의 감정 특징 분석**
 - **멀티모달 모델로 이미지와 음성을 함께 학습하는 방식 구현**
 
-## 실행 방법
-1. **데이터 다운로드 및 전처리**
-   ```bash
-   python preprocess.py
-
 ## 🔧 기술 스택
 - **Deep Learning Frameworks:** TensorFlow, PyTorch
 - **Facial Expression Analysis:** CNN
