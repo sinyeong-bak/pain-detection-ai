@@ -60,7 +60,6 @@ pain-detection-ai/
 - **Deep Learning Frameworks:** TensorFlow, PyTorch
 - **Facial Expression Analysis:** CNN
 - **Audio Emotion Analysis:** LSTM + MFCC
-- **Text-based Sentiment Analysis:** NLP (Transformer, BERT)
 
 ## 프로젝트 진행 일정
 - 📅 **Week 1:** 데이터셋 분석 및 전처리
